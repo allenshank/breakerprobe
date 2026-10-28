@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allenshank-breakerprobe"
+version = "0.1.0"
+description = "通过字符级与结构级特征识别熔断器的半开探测的痕迹，给出密度与命中位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "allenshank" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://allenshank.github.io"
+Repository = "https://github.com/allenshank/breakerprobe"
+Issues = "https://github.com/allenshank/breakerprobe/issues"
+
+[project.scripts]
+breakerprobe = "breakerprobe:main"
+
+[tool.setuptools]
+py-modules = ["breakerprobe"]
